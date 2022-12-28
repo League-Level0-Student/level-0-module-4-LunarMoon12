@@ -14,7 +14,7 @@ public class GameOver {
 			String game_over = JOptionPane.showInputDialog("Is the game over?");
 			// 2. If they answer "yes" change gameOver to true.
 			if (game_over.equals("Yes")) {
-
+				gameOver = true;
 			}
 		}
 		JOptionPane.showMessageDialog(null, "The game is over.");

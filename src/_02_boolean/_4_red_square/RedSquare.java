@@ -7,27 +7,49 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 public class RedSquare {
-	
+
 	static boolean drewRedSquare = false;
 	static boolean drewBlueSquare = false;
 	static boolean drewRedTriangle = false;
 	static boolean drewBlueTriangle = false;
-	
+
 	public static void main(String[] args) {
 		
 		boolean isRed = false;
-		boolean isSquare = true;
+		boolean isSquare = false;
 		
+		if (isRed && isSquare) {
+			JOptionPane.showMessageDialog(null, "You drew a square!");
+		}
+		if (!isRed && isSquare) {
+			JOptionPane.showMessageDialog(null, "You drew a square!");
+		}
+		 if (isRed && !isSquare) {
+			JOptionPane.showMessageDialog(null, "You drew a triangle!");
+		}
+		if (!isRed && !isSquare) {
+			JOptionPane.showMessageDialog(null, "You drew a triangle!");
+		}
 		// The && shown here means that both booleans must be true for the 
 		// entire if statement to be true. It is referred to as the "and"
 		// operator. 
-		if(isRed && isSquare) {
+		if (isRed && isSquare) {
 			drawRedSquare();
+		}
+		else if (!isRed && isSquare) {
+		drawBlueSquare();
+		}
+		else if(isRed && !isSquare) {
+		drawRedTriangle();
+		}
+		else if (!isRed && !isSquare){
+		drawBlueTriangle();
 		}
 		else {
             JOptionPane.showMessageDialog(null, "No shape was drawn!");
         }
-		
+	
+	}	
 		// 1. Run the program and notice no shape is drawn.
 		
 		// 2. Initialize isRed to true instead of false and run the program 
@@ -65,8 +87,8 @@ public class RedSquare {
 		//    variables like you did in step 6. Make sure that when it draws
 		//    a shape that the pop-up correctly says what it drew. 
 		
-	}
 	
+
 	static void drawRedSquare() {
 		Robot rob = new Robot();
 		rob.penDown();
@@ -76,10 +98,10 @@ public class RedSquare {
 			rob.turn(90);
 			rob.move(100);
 		}
-		
+
 		drewRedSquare = true;
-	}	
-	
+	}
+
 	static void drawBlueSquare() {
 		Robot rob = new Robot();
 		rob.penDown();
@@ -89,10 +111,10 @@ public class RedSquare {
 			rob.turn(90);
 			rob.move(100);
 		}
-		
+
 		drewBlueSquare = true;
 	}
-	
+
 	static void drawRedTriangle() {
 		Robot rob = new Robot();
 		rob.penDown();
@@ -102,12 +124,12 @@ public class RedSquare {
 			rob.turn(120);
 			rob.move(100);
 		}
-		
+
 		drewRedTriangle = true;
 	}
-	
+
 	static void drawBlueTriangle() {
-		
+
 		Robot rob = new Robot();
 		rob.penDown();
 		rob.setSpeed(100);
@@ -116,8 +138,8 @@ public class RedSquare {
 			rob.turn(120);
 			rob.move(100);
 		}
-		
+
 		drewBlueTriangle = true;
-		
+
 	}
 }
