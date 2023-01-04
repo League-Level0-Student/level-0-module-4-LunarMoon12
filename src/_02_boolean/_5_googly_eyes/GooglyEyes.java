@@ -13,6 +13,7 @@ import processing.core.PImage;
  * 2. Declare a variable for the image:
  *    PImage face;
  * 
+ 
  * 3. In your setup() method, import your image using the following code:
  *    face = loadImage("face.jpg");
  * 
@@ -37,27 +38,36 @@ import processing.core.PImage;
  *    to the boundary. Put this code before you draw the pupils.
  */
 public class GooglyEyes extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
-    
-    PImage face;
-    
-    @Override
-    public void settings() {
-        size(WIDTH, HEIGHT);
-    }
-    
-    @Override
-    public void setup() {
+	static final int WIDTH = 800;
+	static final int HEIGHT = 600;
 
-    }
+	PImage puppy;
 
-    @Override
-    public void draw() {
+	@Override
+	public void settings() {
+		size(WIDTH, HEIGHT);
+	}
 
-    }
+	@Override
+	public void setup() {
+		puppy = loadImage("PuppyEyes.jpg");
+		size(800,600);
+		puppy.resize(800, 600);
+	}
 
-    static public void main(String[] args) {
-        PApplet.main(GooglyEyes.class.getName());
-    }
+	@Override
+	public void draw() {
+		background(puppy);
+		fill(255, 255, 255);
+		ellipse(mouseX,mouseY,50,50);
+	}
+	
+	
+
+	
+
+	static public void main(String[] args) {
+		PApplet.main(GooglyEyes.class.getName());
+	}
 }
+
