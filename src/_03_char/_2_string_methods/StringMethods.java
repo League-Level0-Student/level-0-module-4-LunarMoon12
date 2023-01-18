@@ -16,8 +16,8 @@ System.out.print(variable.length());
 		
 		// 4. Using a for loop, print one char at time to the console.
 		//    HINT: use .length() to determine how many loops
-for (int i = 0; i < 3; i++) {
-System.out.print(variable.length());
+for (int i = 0; i < variable.length(); i++) {
+System.out.print(variable.charAt(i));
 }
 
 		
@@ -26,8 +26,11 @@ System.out.print(variable.length());
 		//    Print the char's position to the console.
 		//    EXAMPLE: if your string is "abc" and you are searching 
 		//             for char 'b', then print "b is at index 1"
-		
+		for(int n = 0; n < variable.length(); n++) {
+			if (variable.charAt(n) == 'c') {
+			System.out.print(n);
+			}
+			}
+		}
 	}
-}
-
 
