@@ -2,6 +2,8 @@ package _03_char._3_pi_aloud;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 
 public class PiAloud {
 	/***********
@@ -21,7 +23,7 @@ String pi_digits = "3.1415926335897932384";
 System.out.print(pi_digits.charAt(0));
 System.out.print(pi_digits.charAt(1));
 System.out.print(pi_digits.charAt(2));
-System.out.print(pi_digits.charAt(3));
+System.out.println(pi_digits.charAt(3));
     // 4. Print ALL the digits of the Pi String, putting each digit on a new line  (hint: use a loop)
 for(int i = 0; i < pi_digits.length(); i++) {
 	System.out.println(pi_digits.charAt(i));
@@ -29,7 +31,7 @@ for(int i = 0; i < pi_digits.length(); i++) {
     // 5. Skip this step if your computer cannot play sounds.
     //if (canPlaySounds) 
         // Use the Sound.speak() method to speak each digit of Pi.
-        
+        JOptionPane.showMessageDialog(null, "3.1415926335897932384");
     //
 
 }
